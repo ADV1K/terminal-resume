@@ -1,7 +1,7 @@
 # Advik's Terminal Resume
 
 ```bash
-pip install advik -u
+pip install advik -U
 advik
 ```
 
