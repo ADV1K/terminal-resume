@@ -22,7 +22,7 @@ def print_section(section):
 
 
 def interactive():
-    sections = [f.stem for f in INFO_DIR.iterdir()]
+    sections = sorted(f.stem for f in INFO_DIR.iterdir())
     current = 0
 
     key = ""
@@ -34,7 +34,7 @@ def interactive():
 
         clear()
         print_section(sections[current % len(sections)])
-        print("(n)ext section, (p)revious section, (h)elp, (q)uit")
+        print("Commands: (n)ext section, (p)revious section, (q)uit")
         key = getch()
 
 
