@@ -3,7 +3,7 @@ build: data-file
 	poetry run python build.py resume.toml advik/sections
 	poetry build
 
-data-file: resume.toml
+data-file:
 	curl -o resume.toml https://raw.githubusercontent.com/adv1k/adv1k/main/resume.toml
 
 install: build
