@@ -1,13 +1,9 @@
 from pathlib import Path
 import sys
 
-from .utils import getch
+from .utils import getch, clear
 
 INFO_DIR = Path(__file__).parent / "sections"
-
-
-def clear():
-    print("\033c", end="")
 
 
 def usage():
@@ -18,7 +14,7 @@ def usage():
 def print_section(section):
     file = INFO_DIR / section
     if file.exists():
-        print(file.read_text())
+        print(file.read_text(encoding="utf-8"))
 
 
 def interactive():
